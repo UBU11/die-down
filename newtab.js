@@ -1,11 +1,9 @@
-
 function formatTime(time) {
+
   return time < 10 ? `0${time}` : time;
 }
 
-
 function startCountdown() {
-
   const daysEl = document.getElementById("days");
   const hoursEl = document.getElementById("hours");
   const minutesEl = document.getElementById("minutes");
@@ -15,19 +13,15 @@ function startCountdown() {
   const currentYear = new Date().getFullYear();
   const endDate = new Date(`December 31, ${currentYear} 23:59:59`);
 
-
   const interval = setInterval(() => {
     const now = new Date();
     const timeLeft = endDate - now;
 
-
     if (timeLeft < 0) {
       clearInterval(interval);
-      daysEl.innerText = "0";
-      hoursEl.innerText = "00";
-      minutesEl.innerText = "00";
-      secondsEl.innerText = "00";
-      document.querySelector(".title").innerText = "Happy New Year!";
+      document.getElementById("countdown").style.display = "none";
+      document.querySelector(".title").innerText = "A NEW YEAR HAS BEGUN!";
+      document.querySelector(".quote").innerText = "To a heroic new year!";
       return;
     }
 
