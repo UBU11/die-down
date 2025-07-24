@@ -1,0 +1,115 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  background-image: radial-gradient(circle, #1a1a1a, #121212 80%);
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00ffff;
+
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+
+}
+
+
+.time-box {
+  background: #1a1a1a;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid #00ffff44;
+  min-width: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.time-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+}
+
+
+.time-value {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+
+.time-label {
+  font-size: 1rem;
+  color: #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+
+
+#countdown>div:last-child {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.3);
+    border-color: #ff000044;
+  }
+
+  50% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.7);
+    border-color: #ff0000;
+  }
+
+  100% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.3);
+    border-color: #ff000044;
+  }
+}
+
+
+.quote {
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #aaaaaa;
+  max-width: 600px;
+}
