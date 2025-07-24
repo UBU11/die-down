@@ -36,7 +36,7 @@ function startCountdown() {
     hoursEl.innerText = formatTime(hours);
     minutesEl.innerText = formatTime(minutes);
     secondsEl.innerText = formatTime(seconds);
-  }, 1000);
+  },0);
 }
 
 startCountdown();
